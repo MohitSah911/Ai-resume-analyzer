@@ -1,0 +1,17 @@
+{
+  "name": "ai-resume-analyzer",
+  "version": "1.0.0",
+  "description": "An intelligent resume analysis and mock interview platform designed to help candidates prepare for product-based company interviews.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\" \"cd python-service && uv run uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload\"",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client && cd python-service && uv pip install -r pyproject.toml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
